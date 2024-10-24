@@ -80,6 +80,8 @@ title "fetch apigateway public key"
 apigw-manager.sh fetch_apigw_public_key --gateway-name=${gateway_name} --print > "apigateway.pub"
 
 title "releasing"
+# 创建资源版本并发布；指定参数 --generate-sdks 时，会同时生成资源版本对应的网关 SDK, 指定 --stage stage1 stage2 时会发布指定环境,不设置则发布所有环境
+# 指定参数 --no-pub 则只生成版本，不发布
 call_definition_command_or_exit create_version_and_release_apigw "${definition_file}" --gateway-name=${gateway_name}
 
 log_info "done"
@@ -113,7 +115,7 @@ log_info "done"
 步骤2：在 chart values.yaml 中添加配置
 ```yaml
 apigatewaySync:
-  image: "hub.bktencent.com/blueking/apigw-manager:3.0.4"
+  image: "hub.bktencent.com/blueking/apigw-manager:3.1.1"
   configMapMounts:
     - name: "sync-apigw-base"
       filePath: "files/support-files/*"
@@ -211,7 +213,7 @@ spec:
 
 步骤2. 构建 Dockerfile，参考：
 ```Dockerfile
-FROM hub.bktencent.com/blueking/apigw-manager:3.0.4
+FROM hub.bktencent.com/blueking/apigw-manager:3.1.1
 
 COPY support-files /data/
 ```
@@ -260,7 +262,7 @@ docker run --rm \
     -e BK_API_URL_TMPL=<BK_API_URL_TMPL> \
     -e BK_APP_CODE=<BK_APP_CODE> \
     -e BK_APP_SECRET=<BK_APP_SECRET> \
-    hub.bktencent.com/blueking/apigw-manager:3.0.4
+    hub.bktencent.com/blueking/apigw-manager:3.1.1
 ```
 
 
@@ -274,6 +276,7 @@ call_definition_command_or_exit add_related_apps "${definition_file}" --gateway-
 call_definition_command_or_exit apply_apigw_permissions "${definition_file}" --gateway-name=${gateway_name} 
  
 # 创建资源版本并发布；指定参数 --generate-sdks 时，会同时生成资源版本对应的网关 SDK, 指定 --stage stage1 stage2 时会发布指定环境,不设置则发布所有环境
+# 指定参数 --no-pub 则只生成版本，不发布
 call_definition_command_or_exit create_version_and_release_apigw "${definition_file}" --gateway-name=${gateway_name}
  
 # 获取网关公钥，存放到文件 apigateway.pub 
