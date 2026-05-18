@@ -1,0 +1,19 @@
+sdks/apigw-manager/tests/apigw_manager/drf/test_utils.py
+  s_c57ce34e1b0cc0::t_85cb1d9bf0d169 120
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.4.8",
+  "base_commit_sha": "a4f972e102836b4250b4b59b8b5d1ae8b0f5f15c",
+  "prompts": {},
+  "sessions": {
+    "s_c57ce34e1b0cc0": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "019e3935-1f28-74a0-83ce-bb9c0eaf97b2",
+        "model": "gpt-5.5"
+      },
+      "human_author": "wklken <wklken@gmail.com>"
+    }
+  }
+}
