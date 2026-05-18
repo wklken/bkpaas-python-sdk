@@ -1,0 +1,57 @@
+sdks/apigw-manager/tests/apigw_manager/drf/test_utils.py
+  s_d4ad943c12e16b::t_aedd6fb73852ea 168-191
+  s_d4ad943c12e16b::t_ec32a6211e3a70 13-14,55-89,107-124,149-167
+sdks/apigw-manager/src/apigw_manager/drf/management/commands/generate_definition_yaml.py
+  s_c57ce34e1b0cc0::t_1549332f8d1a2f 20,52-62,67,69
+  s_c57ce34e1b0cc0::t_7182f52f2ca9e9 64-65,68
+sdks/apigw-manager/tests/apigw_manager/drf/test_apps.py
+  s_ef3ccde6c5b6e1::t_a70898f92d4c9a 16-26
+sdks/apigw-manager/tests/apigw_manager/drf/management/commands/test_generate_resources_yaml.py
+  s_d4ad943c12e16b::t_ec32a6211e3a70 10,12,15,17-18,20,123-188,204-228,245-318
+  s_d4ad943c12e16b::t_aedd6fb73852ea 189-203,229-233,235-244
+  s_d4ad943c12e16b::t_3ddafe83f30371 234
+  s_3d9dba26c96422::t_5e7e99d29d85d5 11,319-361
+sdks/apigw-manager/tests/apigw_manager/drf/management/commands/test_generate_definition_yaml.py
+  s_c57ce34e1b0cc0::t_b0e3d7786b143e 11,41-137,157-195
+  s_c57ce34e1b0cc0::t_2944a5a9bd0031 36,138-156
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.4.8",
+  "base_commit_sha": "cd3cdba4c2440b9425dcbfef2e8763b8e20fb9c6",
+  "prompts": {},
+  "sessions": {
+    "s_3d9dba26c96422": {
+      "agent_id": {
+        "tool": "github-copilot",
+        "id": "261e0af5-6f00-4188-ba38-ab62d5b6cfa8",
+        "model": "gpt-5-mini"
+      },
+      "human_author": "wklken <wklken@gmail.com>"
+    },
+    "s_c57ce34e1b0cc0": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "019e3935-1f28-74a0-83ce-bb9c0eaf97b2",
+        "model": "gpt-5.5"
+      },
+      "human_author": "wklken <wklken@gmail.com>"
+    },
+    "s_d4ad943c12e16b": {
+      "agent_id": {
+        "tool": "github-copilot",
+        "id": "20c3a3f7-dc98-4817-b8df-dd789cd53a59",
+        "model": "gpt-5-mini"
+      },
+      "human_author": "wklken <wklken@gmail.com>"
+    },
+    "s_ef3ccde6c5b6e1": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "019e39c7-9d98-7330-88cb-d9d89d87eb5c",
+        "model": "gpt-5.5"
+      },
+      "human_author": "wklken <wklken@gmail.com>"
+    }
+  }
+}
