@@ -1,0 +1,25 @@
+sdks/apigw-manager/tox.ini
+  s_8d7e8f8278a806::t_9deef6992b98e7 15
+  s_8d7e8f8278a806::t_4fc623b2862928 4,12
+sdks/apigw-manager/pyproject.toml
+  s_8d7e8f8278a806::t_9deef6992b98e7 25
+  s_8d7e8f8278a806::t_4fc623b2862928 14,80
+sdks/apigw-manager/CHANGE.md
+  s_8d7e8f8278a806::t_4fc623b2862928 5
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.5.3",
+  "base_commit_sha": "e842d6d65c1edccd625c00225f3d46b704aff83c",
+  "prompts": {},
+  "sessions": {
+    "s_8d7e8f8278a806": {
+      "agent_id": {
+        "tool": "github-copilot",
+        "id": "6f28f9bd-ec91-45a3-b58b-4a3240dff88a",
+        "model": "gpt-5-mini"
+      },
+      "human_author": "wklken <wklken@gmail.com>"
+    }
+  }
+}
