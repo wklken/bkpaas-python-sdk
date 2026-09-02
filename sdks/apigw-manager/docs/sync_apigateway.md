@@ -333,9 +333,11 @@ x-bk-apigateway-resource:
     appVerifiedRequired: true  # 是否开启应用认证，开启后请求方需提供蓝鲸应用身份信息
     userVerifiedRequired: false # 是否开启用户认证，请求方需提供蓝鲸用户身份信息
     resourcePermissionRequired: false # 是否校验应用权限，开启后，蓝鲸应用需申请资源访问权限; 前提必须开启应用认证；
-    oauth2PersonalClientEnabled: false # 是否开启 OAuth2 个人客户端模式(个人 token)
+    oauth2PersonalClientEnabled: false # 是否开启 OAuth2 个人客户端模式(个人 token)，开启时必须同时开启用户认证
   descriptionEn: # 资源描述的英文翻译
 ```
+
+> **注意**：API 资源开启 `oauth2PersonalClientEnabled` 时，必须同时将 `userVerifiedRequired` 设置为 `true`。参数组合由 API 网关服务端校验，SDK 不做前置校验。
 
 > 详细的插件配置见：[插件配置说明](./plugin-use-guide.md)
 
@@ -562,7 +564,7 @@ x-bk-apigateway-resource:
     appVerifiedRequired: true
     userVerifiedRequired: false
     resourcePermissionRequired: false
-    oauth2PersonalClientEnabled: false
+    oauth2PersonalClientEnabled: false # 开启时必须同时设置 userVerifiedRequired: true
   descriptionEn: anything
 ```
 

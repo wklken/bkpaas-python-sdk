@@ -49,7 +49,8 @@ def gen_apigateway_resource_config(
         match_subpath (bool, optional): 匹配所有子路径，默认为 False. 默认 False
         none_schema (bool, optional): 是否有请求参数. 默认 False，如果需要添加到 mcp server 中使用，没有参数一定要设置为 True
         enable_mcp (bool, optional): 是否启用 MCP 功能. 默认 False
-        oauth2_personal_client_enabled (bool, optional): 是否开启 OAuth2 个人客户端模式(个人 token)。默认 False
+        oauth2_personal_client_enabled (bool, optional): 是否开启 OAuth2 个人客户端模式(个人 token)，启用时必须同时设置
+            user_verified_required=True。默认 False
     Returns:
         Dict[str, Dict[str, any]]: _description_
     """
