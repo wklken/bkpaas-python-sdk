@@ -124,7 +124,7 @@ stages:
 #          - "bk_app_code1"
 #        # 是否开启 OAuth2 公开客户端模式，开启后将对 bk_app_code=public 的应用授权，默认不开启
 #        oauth2_public_client_enabled: false
-#        # 是否开启 OAuth2 个人客户端模式，开启后将对 bk_app_code=personal 的应用授权，默认不开启
+#        # 是否开启 OAuth2 个人客户端模式(个人 token)，开启后将对 bk_app_code=personal 的应用授权，默认不开启
 #        oauth2_personal_client_enabled: false
 #        # 是否返回原始响应，开启后 mcp-proxy 将直接返回 API 响应结果，不添加 request_id 等额外信息，默认不开启
 #        raw_response_enabled: false
@@ -219,7 +219,7 @@ stages:
     #       - "bk_app_code1"
     #     # 是否开启 OAuth2 公开客户端模式
     #     oauth2_public_client_enabled: false
-    #     # 是否开启 OAuth2 个人客户端模式
+    #     # 是否开启 OAuth2 个人客户端模式(个人 token)
     #     oauth2_personal_client_enabled: false
     #     # 是否返回原始响应，开启后 mcp-proxy 直接返回 API 响应结果
     #     raw_response_enabled: false
@@ -333,7 +333,7 @@ x-bk-apigateway-resource:
     appVerifiedRequired: true  # 是否开启应用认证，开启后请求方需提供蓝鲸应用身份信息
     userVerifiedRequired: false # 是否开启用户认证，请求方需提供蓝鲸用户身份信息
     resourcePermissionRequired: false # 是否校验应用权限，开启后，蓝鲸应用需申请资源访问权限; 前提必须开启应用认证；
-    oauth2PersonalClientEnabled: false # 是否允许 OAuth2 个人客户端访问
+    oauth2PersonalClientEnabled: false # 是否开启 OAuth2 个人客户端模式(个人 token)
   descriptionEn: # 资源描述的英文翻译
 ```
 
@@ -431,7 +431,7 @@ resource_docs:
 | `protocol_type` | string | 否 | MCP 协议类型：`sse`（默认）、`streamable_http` |
 | `target_app_codes` | array[string] | 否 | 主动授权的应用列表 |
 | `oauth2_public_client_enabled` | bool | 否 | 是否开启 OAuth2 公开客户端模式，开启后将对 `bk_app_code=public` 的应用进行授权，默认不开启 |
-| `oauth2_personal_client_enabled` | bool | 否 | 是否开启 OAuth2 个人客户端模式，开启后将对 `bk_app_code=personal` 的应用进行授权，默认不开启 |
+| `oauth2_personal_client_enabled` | bool | 否 | 是否开启 OAuth2 个人客户端模式(个人 token)，开启后将对 `bk_app_code=personal` 的应用进行授权，默认不开启 |
 | `raw_response_enabled` | bool | 否 | 是否返回原始响应，开启后 mcp-proxy 将直接返回 API 响应结果，不添加 request_id 等额外信息，默认不开启 |
 | `category_names` | array[string] | 否 | MCP Server 分类名称列表，不传则不更新分类 |
 
