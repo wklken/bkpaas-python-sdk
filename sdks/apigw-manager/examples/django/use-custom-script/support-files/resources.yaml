@@ -32,4 +32,5 @@ paths:
           appVerifiedRequired: true
           userVerifiedRequired: false
           resourcePermissionRequired: false
+          oauth2PersonalClientEnabled: false
         descriptionEn:
